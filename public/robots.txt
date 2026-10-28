@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you
+Sitemap: https://hijamah-centre-website.netlify.app/sitemap.xml

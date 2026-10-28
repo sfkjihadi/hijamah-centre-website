@@ -1,0 +1,13 @@
+# Project architecture
+
+This is a lightweight static site for Al Sunnat Hijamah Centre, Islamabad and Rawalpindi. Netlify publishes `public/` without a build command. The requested marketing template could not be fetched during the resumed run, so plain HTML/CSS/JavaScript avoids framework installation and build requirements.
+
+`public/index.html` holds the complete landing page, static booking form, local business JSON-LD, and SEO/social metadata. `public/styles.css` defines forest green, ivory, muted gold, Manrope headings, DM Sans body text, responsive layouts, and reduced-motion behavior. `public/app.js` enhances the mobile menu, package selection, policy anchors, monthly calendar, past-date handling, and booking submission. `thank-you.html` handles native form success; `404.html` handles missing pages. `img/hijama.png` is generated illustrative imagery, referenced through Netlify Image CDN, not a real clinic photograph.
+
+Persist appointment requests through Netlify Forms; do not replace it with browser storage or in-memory data. Keep the static form name, form-name field, honeypot, and submitted field names intact. Static HTML lets Netlify scan the visible form directly; no separate skeleton is needed. AJAX posts to `/`, which is valid for this static site. Preserve required consent, duplicate-submit prevention, timeout, HTTP/error handling, rejection of unchanged form HTML, and field preservation after failure. Never log booking data. No email recipient is configured; staff must monitor Forms. An accepted request never guarantees a reserved slot.
+
+The calendar uses the centre-supplied 29 October / 31 October / 2 November 2026 schedule, mapped in that order to lunar days 17/19/21. No independent sighting source or Islamic month name was supplied. Keep attribution honest and do not invent further lunar conversions. Update both HTML months and the archive threshold in app.js together. Dates and availability still require direct confirmation.
+
+Never invent reviews, qualifications, operating hours, hygiene credentials, or medical claims. Female specialist and home appointments are subject to availability. The map iframe shows the station area; the supplied maps.app.goo.gl link is the exact location link. Preserve phone +92 305 9799959 and the supplied Facebook, TikTok, and WhatsApp URLs.
+
+Use semantic elements, labeled fields, inline SVG icons, keyboard focus styles, and native details for FAQs. Keep essential content available without JavaScript. Do not add tracking, accounts, or unrelated services. Keep README and the results description current. Follow platform restrictions on local validation commands; do not create commits or inspect .git.
